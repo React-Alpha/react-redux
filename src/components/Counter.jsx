@@ -1,17 +1,7 @@
-import { useState } from "react";
 import Button from "./Button";
 import Count from "./Count";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
+const Counter = ({ count, handleIncrement, handleDecrement }) => {
   return (
     <div className="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
       <Count count={count} />
